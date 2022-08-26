@@ -298,5 +298,11 @@ describe('Central de Atendimento ao Cliente TAT', function() {
             expect(response.statusText).to.equal('OK')
         });
       })
+      it('Encontrando o gato na página CAC TAT', function(){
+        cy.get('#cat')
+        .should('not.be.visible')
+        .invoke('show')
+        .should('be.visible')
+      })
 
   })
